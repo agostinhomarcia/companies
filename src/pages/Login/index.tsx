@@ -83,7 +83,7 @@ export function Login() {
         <Box component="form" onSubmit={handleSubmit} noValidate>
           <TextField
             fullWidth
-            label="Usuário"
+            label="User"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             margin="normal"
@@ -97,7 +97,7 @@ export function Login() {
           <TextField
             fullWidth
             type={showPassword ? "text" : "password"}
-            label="Senha"
+            label="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             margin="normal"
@@ -147,7 +147,7 @@ export function Login() {
             align="center"
             display="block"
           >
-            Use admin / 123456 para acessar
+            User: admin / Password: 123456 para acessar
           </Typography>
         </Box>
       </Paper>
