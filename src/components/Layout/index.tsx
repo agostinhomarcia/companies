@@ -16,8 +16,6 @@ import {
 } from "@mui/material";
 import {
   Menu as MenuIcon,
-  Business,
-  Group,
   Info,
   Logout,
   Add,
@@ -30,8 +28,6 @@ const drawerWidth = 280;
 export function Layout() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const navigate = useNavigate();
-
-  const username = Cookies.get("user") || localStorage.getItem("user");
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -133,19 +129,15 @@ export function Layout() {
           >
             <MenuIcon />
           </IconButton>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              width: "100%",
-              justifyContent: "space-between",
-            }}
-          >
-            <Typography variant="h6" noWrap component="div">
-              Dashboard
-            </Typography>
-            <Typography variant="subtitle1">Olá, {username}</Typography>
-          </Box>
+          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
+            Dashboard
+          </Typography>
+          <Typography variant="subtitle1" sx={{ mr: 2 }}>
+            Olá, admin
+          </Typography>
+          <IconButton color="inherit" onClick={handleLogout}>
+            <Logout />
+          </IconButton>
         </Toolbar>
       </AppBar>
 

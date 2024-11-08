@@ -19,6 +19,8 @@ import {
   DialogTitle,
   DialogContent,
   DialogActions,
+  Link,
+  Chip,
 } from "@mui/material";
 import {
   Edit as EditIcon,
@@ -120,10 +122,10 @@ export function ListPartners() {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell>Nome</TableCell>
-                <TableCell>Tipo de Integração</TableCell>
-                <TableCell>Clientes</TableCell>
-                <TableCell>Data de Criação</TableCell>
+                <TableCell>Nome do Parceiro</TableCell>
+                <TableCell>Email</TableCell>
+                <TableCell>Repositório Git</TableCell>
+                <TableCell>Status</TableCell>
                 <TableCell align="right">Ações</TableCell>
               </TableRow>
             </TableHead>
@@ -131,10 +133,24 @@ export function ListPartners() {
               {paginatedPartners.map((partner) => (
                 <TableRow key={partner.id}>
                   <TableCell>{partner.name}</TableCell>
-                  <TableCell>{partner.integration_type}</TableCell>
-                  <TableCell>{partner.clients.join(", ")}</TableCell>
+                  <TableCell>{partner.email}</TableCell>
                   <TableCell>
-                    {new Date(partner.created_at).toLocaleDateString()}
+                    {partner.gitRepository && (
+                      <Link
+                        href={partner.gitRepository}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {partner.gitRepository}
+                      </Link>
+                    )}
+                  </TableCell>
+                  <TableCell>
+                    <Chip
+                      label={partner.isActive ? "Ativo" : "Inativo"}
+                      color={partner.isActive ? "success" : "default"}
+                      size="small"
+                    />
                   </TableCell>
                   <TableCell align="right">
                     <Tooltip title="Editar">

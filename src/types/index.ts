@@ -1,9 +1,9 @@
 export interface Partner {
   id: string;
   name: string;
-  description: string;
-  integration_type: string;
-  clients: string[];
+  email: string;
+  gitRepository: string;
+  isActive: boolean;
   created_at: string;
 }
 

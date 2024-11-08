@@ -9,6 +9,8 @@ import {
   Alert,
   CircularProgress,
   Grid,
+  FormControlLabel,
+  Switch,
 } from "@mui/material";
 import { useQuery, useMutation, useQueryClient } from "react-query";
 import { partnersApi } from "../../services/api";
@@ -22,9 +24,9 @@ export function PartnerForm() {
 
   const [formData, setFormData] = useState<Partial<Partner>>({
     name: "",
-    description: "",
-    integration_type: "",
-    clients: [],
+    email: "",
+    gitRepository: "",
+    isActive: true,
   });
   const [error, setError] = useState("");
 
@@ -69,8 +71,14 @@ export function PartnerForm() {
     e.preventDefault();
     setError("");
 
-    if (!formData.name?.trim() || !formData.integration_type?.trim()) {
+    if (!formData.name?.trim() || !formData.email?.trim()) {
       setError("Por favor, preencha todos os campos obrigatórios");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setError("Por favor, insira um email válido");
       return;
     }
 
@@ -94,7 +102,7 @@ export function PartnerForm() {
     <Box sx={{ maxWidth: 800, mx: "auto", mt: 4 }}>
       <Paper elevation={3} sx={{ p: 4 }}>
         <Typography variant="h5" component="h1" gutterBottom>
-          {isEditing ? "Editar Parceiro" : "Novo Parceiro"}
+          {isEditing ? "Editar Parceiro" : "Novo Parceiro BusinessFlow"}
         </Typography>
 
         {error && (
@@ -104,76 +112,87 @@ export function PartnerForm() {
         )}
 
         <Box component="form" onSubmit={handleSubmit} noValidate>
-          <Grid container spacing={2}>
+          <Grid container spacing={3}>
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                label="Nome"
+                label="Nome do Parceiro"
                 value={formData.name}
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
                 required
                 error={!!error && !formData.name?.trim()}
+                helperText={
+                  !!error && !formData.name?.trim() ? "Campo obrigatório" : ""
+                }
+                placeholder="Insira o nome"
               />
             </Grid>
 
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                label="Tipo de Integração"
-                value={formData.integration_type}
+                label="Email do Parceiro"
+                value={formData.email}
                 onChange={(e) =>
-                  setFormData({ ...formData, integration_type: e.target.value })
+                  setFormData({ ...formData, email: e.target.value })
                 }
                 required
-                error={!!error && !formData.integration_type?.trim()}
+                error={!!error && !formData.email?.trim()}
+                helperText={
+                  !!error && !formData.email?.trim() ? "Campo obrigatório" : ""
+                }
+                placeholder="exemplo@email.com"
+                type="email"
               />
             </Grid>
 
             <Grid item xs={12}>
               <TextField
                 fullWidth
-                label="Descrição"
-                value={formData.description}
+                label="Repositório Git"
+                value={formData.gitRepository}
                 onChange={(e) =>
-                  setFormData({ ...formData, description: e.target.value })
+                  setFormData({ ...formData, gitRepository: e.target.value })
                 }
-                multiline
-                rows={4}
+                placeholder="Insira o repositório"
+                helperText="Ex: https://github.com/usuario/repositorio"
               />
             </Grid>
 
             <Grid item xs={12}>
-              <TextField
-                fullWidth
-                label="Clientes (separados por vírgula)"
-                value={formData.clients?.join(", ")}
-                onChange={(e) =>
-                  setFormData({
-                    ...formData,
-                    clients: e.target.value
-                      .split(",")
-                      .map((client) => client.trim()),
-                  })
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={Boolean(formData.isActive)}
+                    onChange={(e) =>
+                      setFormData({ ...formData, isActive: e.target.checked })
+                    }
+                    color="primary"
+                  />
                 }
+                label="Empresa ativa?"
               />
             </Grid>
           </Grid>
 
-          <Box sx={{ mt: 3, display: "flex", gap: 2 }}>
+          <Box sx={{ mt: 4, display: "flex", gap: 2 }}>
             <Button
               type="submit"
               variant="contained"
               disabled={mutation.isLoading}
+              size="large"
             >
               {mutation.isLoading ? "Salvando..." : "Salvar"}
             </Button>
 
             <Button
               type="button"
+              variant="outlined"
               onClick={() => navigate("/partners")}
               disabled={mutation.isLoading}
+              size="large"
             >
               Cancelar
             </Button>
