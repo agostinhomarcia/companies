@@ -1,20 +1,67 @@
 import "./App.css";
-import { ListPartners } from "./pages/Partners/ListPartners";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { Login } from "./pages/Login";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+
+import { AuthProvider } from "./contexts/AuthContext";
+import { PrivateRoute } from "./components/PrivateRoute";
 import { Layout } from "./components/Layout";
+import { Login } from "./pages/Login";
+import { ListPartners } from "./pages/Partners/ListPartners";
+import { PartnerForm } from "./pages/Partners/PartnerForm";
+import { ListExternalCompanies } from "./pages/ExternalCompanies/ListExternalCompanies";
+import { ExternalCompanyForm } from "./pages/ExternalCompanies/ExternalCompanyForm";
+import { About } from "./pages/About";
+
+const queryClient = new QueryClient();
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#1976d2",
+    },
+    background: {
+      default: "#f5f5f5",
+    },
+  },
+});
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Navigate to="/partners" replace />} />
-          <Route path="partners" element={<ListPartners />} />
-          {/* ... outras rotas ... */}
-        </Route>
-      </Routes>
+      <AuthProvider>
+        <QueryClientProvider client={queryClient}>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <Routes>
+              <Route path="/login" element={<Login />} />
+              <Route
+                path="/"
+                element={
+                  <PrivateRoute>
+                    <Layout />
+                  </PrivateRoute>
+                }
+              >
+                <Route index element={<Navigate to="/partners" replace />} />
+                <Route path="partners">
+                  <Route index element={<ListPartners />} />
+                  <Route path="new" element={<PartnerForm />} />
+                  <Route path="edit/:id" element={<PartnerForm />} />
+                </Route>
+                <Route path="external-companies">
+                  <Route index element={<ListExternalCompanies />} />
+                  <Route path="new" element={<ExternalCompanyForm />} />
+                  <Route path="edit/:id" element={<ExternalCompanyForm />} />
+                </Route>
+                <Route path="about" element={<About />} />
+              </Route>
+              <Route path="*" element={<Navigate to="/login" replace />} />
+            </Routes>
+          </ThemeProvider>
+        </QueryClientProvider>
+      </AuthProvider>
     </BrowserRouter>
   );
 }
