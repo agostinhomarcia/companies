@@ -39,10 +39,11 @@ Sistema de gerenciamento de parceiros e empresas externas desenvolvido com React
 
 2. Instale as dependências
 
-```npm install
+`npm install`
+
 # ou
-yarn install
-```
+
+`yarn install`
 
 3. Inicie o servidor de desenvolvimento
 
