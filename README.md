@@ -11,6 +11,25 @@ Sistema de gerenciamento de parceiros e empresas externas desenvolvido com React
 - React Router DOM
 - Date-fns
 
+### 📺 Demonstração
+
+<div align="center">
+   <figure>
+      <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGwwb3FqMDB3Z3kzbzczdWQ5dm9pYmZvdXJoMGM1ZzUzOGF4YmN5bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/h5T8vkV7cb57Hmjw8U/giphy.gif" alt="Visualização de Parceiros" width="700"/>
+   </figure>
+   <figure>
+      <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnpnY252ZzB0bHcxNTc3ajhqbzN0dHA1OWRvbHh2YjB3dGgxbm81bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HGOi9i8U30vArHH31u/giphy.gif" alt="Tela de Login" width="700"/>
+    </figure>
+   <figure>
+      <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDM4NjYzcDZiMGxpdThrb21pM3dmMWJzdXp2Z2htOW1kbWpud2p2eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZFLDGd5bJR6wKpZjXh/giphy.gif" alt="Tela Inicial" width="700"/>
+   </figure>
+
+   <figure >
+      <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXVjbjM5OXE4dTRnN2hkdHdidHdta2RyaG9saXZ5ZG9vbXpwZW56cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lzDWeXglrg2eOYxcE3/giphy.gif" alt="Visualização de Empresas" width="700"/>
+   </figure>
+
+</div>
+
 ## 📋 Funcionalidades
 
 ### Parceiros
