@@ -38,6 +38,10 @@ Sistema de gerenciamento de parceiros e empresas externas desenvolvido com React
   </table>
 </div>
 
+### 🔗 Link do projeto
+
+[BusinessFlow](https://companies-two-murex.vercel.app/)
+
 ## 📋 Funcionalidades
 
 ### Parceiros
