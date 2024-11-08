@@ -13,6 +13,7 @@ export interface ExternalCompany {
   sector: string;
   active: boolean;
   created_at: string;
+  numberOfEmployees?: number;
 }
 
 export interface User {

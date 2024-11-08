@@ -26,6 +26,7 @@ export function ExternalCompanyForm() {
     name: "",
     sector: "",
     active: true,
+    numberOfEmployees: 0,
     created_at: new Date().toISOString(),
   });
   const [error, setError] = useState("");
@@ -141,6 +142,24 @@ export function ExternalCompanyForm() {
                 helperText={
                   !!error && !formData.sector?.trim() ? "Campo obrigatório" : ""
                 }
+              />
+            </Grid>
+
+            <Grid item xs={12}>
+              <TextField
+                fullWidth
+                type="number"
+                label="Número de Colaboradores"
+                value={formData.numberOfEmployees || ""}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    numberOfEmployees: parseInt(e.target.value) || 0,
+                  })
+                }
+                InputProps={{
+                  inputProps: { min: 0 },
+                }}
               />
             </Grid>
 
