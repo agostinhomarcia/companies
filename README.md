@@ -33,9 +33,7 @@ Sistema de gerenciamento de parceiros e empresas externas desenvolvido com React
 
 1. Clone o repositório
 
-```git clone https://github.com/seu-usuario/businessflow-partners.git
-
-```
+`git clone https://github.com/seu-usuario/businessflow-partners.git`
 
 2. Instale as dependências
 
@@ -47,10 +45,11 @@ Sistema de gerenciamento de parceiros e empresas externas desenvolvido com React
 
 3. Inicie o servidor de desenvolvimento
 
-```npm start
+`npm start`
+
 # ou
-yarn start
-```
+
+`yarn start`
 
 ## 📁 Estrutura do Projeto
 
