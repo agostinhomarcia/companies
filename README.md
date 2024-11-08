@@ -33,7 +33,7 @@ Sistema de gerenciamento de parceiros e empresas externas desenvolvido com React
 
 1. Clone o repositório
 
-`git clone https://github.com/seu-usuario/businessflow-partners.git`
+`git clone https://github.com/agostinhomarcia/companies.git`
 
 2. Instale as dependências
 
@@ -99,5 +99,5 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 📧 Contato
 
-- LinkedIn: [agostinhomarcia](https://www.linkedin.com/in/marcia-agostinho-developer/)
+- LinkedIn: [Márcia Agostinho](https://www.linkedin.com/in/marcia-agostinho-developer/)
 - GitHub: [agostinhomarcia](https://github.com/agostinhomarcia)
