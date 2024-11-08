@@ -1,50 +1,103 @@
-# React + TypeScript + Vite
+# BusinessFlow | Gestão de Parceiros
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema de gerenciamento de parceiros e empresas externas desenvolvido com React.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- TypeScript
+- Material-UI
+- React Query
+- React Router DOM
+- Date-fns
 
-## Expanding the ESLint configuration
+## 📋 Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Parceiros
 
-- Configure the top-level `parserOptions` property like this:
+- Listagem de parceiros
+- Cadastro de novo parceiro
+- Edição de parceiro
+- Exclusão de parceiro
+- Status ativo/inativo
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Empresas Externas
+
+- Listagem de empresas
+- Cadastro de nova empresa
+- Edição de empresa
+- Exclusão de empresa
+- Status ativo/inativo
+
+## 🔧 Instalação
+
+1. Clone o repositório
+
+```git clone https://github.com/seu-usuario/businessflow-partners.git
+
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Instale as dependências
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```npm install
+# ou
+yarn install
 ```
+
+3. Inicie o servidor de desenvolvimento
+
+```npm start
+# ou
+yarn start
+```
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+  ├── components/      # Componentes reutilizáveis
+  ├── pages/          # Páginas da aplicação
+  ├── services/       # Serviços e APIs
+  ├── hooks/          # Custom hooks
+  ├── types/          # Tipagens TypeScript
+  ├── utils/          # Funções utilitárias
+  └── constants/      # Constantes da aplicação
+```
+
+## 📱 Layout
+
+- Dashboard principal com navegação lateral
+- Listagens com paginação
+- Formulários de cadastro/edição
+- Modais de confirmação
+
+## 👥 Autenticação
+
+- Login com usuário e senha
+- Proteção de rotas
+- Gerenciamento de sessão
+
+## 🔄 Comandos Disponíveis
+
+- `npm start` - Inicia o servidor de desenvolvimento
+- `npm build` - Gera build de produção
+- `npm test` - Executa os testes
+- `npm run lint` - Executa o linter
+- `npm run format` - Formata o código
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 🤝 Contribuição
+
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📧 Contato
+
+- LinkedIn: [agostinhomarcia](https://www.linkedin.com/in/marcia-agostinho-developer/)
+- GitHub: [agostinhomarcia](https://github.com/agostinhomarcia)
