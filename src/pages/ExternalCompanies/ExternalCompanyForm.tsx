@@ -26,10 +26,10 @@ export function ExternalCompanyForm() {
     name: "",
     sector: "",
     active: true,
+    created_at: new Date().toISOString(),
   });
   const [error, setError] = useState("");
 
-  // Busca dados da empresa se estiver editando
   const { data: company, isLoading: isLoadingCompany } = useQuery(
     ["external-company", id],
     async () => {
@@ -42,13 +42,17 @@ export function ExternalCompanyForm() {
     { enabled: isEditing }
   );
 
-  // Mutation para salvar/atualizar empresa
   const mutation = useMutation(
     async (data: Partial<ExternalCompany>) => {
+      const payload = {
+        ...data,
+        created_at: isEditing ? data.created_at : new Date().toISOString(),
+      };
+
       if (isEditing) {
-        return externalCompaniesApi.put(`/${id}`, data);
+        return externalCompaniesApi.put(`/${id}`, payload);
       }
-      return externalCompaniesApi.post("/", data);
+      return externalCompaniesApi.post("/", payload);
     },
     {
       onSuccess: () => {
@@ -62,7 +66,6 @@ export function ExternalCompanyForm() {
     }
   );
 
-  // Carrega dados da empresa no formulário quando disponíveis
   useEffect(() => {
     if (company) {
       setFormData(company);
@@ -73,21 +76,12 @@ export function ExternalCompanyForm() {
     e.preventDefault();
     setError("");
 
-    // Validação básica
     if (!formData.name?.trim() || !formData.sector?.trim()) {
       setError("Por favor, preencha todos os campos obrigatórios");
       return;
     }
 
-    // Prepara dados para envio
-    const dataToSubmit = {
-      ...formData,
-      name: formData.name.trim(),
-      sector: formData.sector.trim(),
-      active: Boolean(formData.active),
-    };
-
-    mutation.mutate(dataToSubmit);
+    mutation.mutate(formData);
   };
 
   if (isEditing && isLoadingCompany) {

@@ -29,6 +29,8 @@ import {
 import { useQuery, useMutation, useQueryClient } from "react-query";
 import { externalCompaniesApi } from "../../services/api";
 import { ExternalCompany } from "../../types";
+import { format, parseISO } from "date-fns";
+import { ptBR } from "date-fns/locale";
 
 const ROWS_PER_PAGE_OPTIONS = [5, 10, 25];
 
@@ -106,6 +108,16 @@ export function ListExternalCompanies() {
     page * rowsPerPage + rowsPerPage
   );
 
+  const formatDate = (dateString: string) => {
+    try {
+      return format(parseISO(dateString), "dd/MM/yyyy", {
+        locale: ptBR,
+      });
+    } catch {
+      return "Data inválida";
+    }
+  };
+
   if (isLoading) {
     return (
       <Box
@@ -147,7 +159,7 @@ export function ListExternalCompanies() {
                 <TableCell>Nome</TableCell>
                 <TableCell>Setor</TableCell>
                 <TableCell>Status</TableCell>
-                <TableCell>Data de Criação</TableCell>
+                <TableCell>Data</TableCell>
                 <TableCell align="right">Ações</TableCell>
               </TableRow>
             </TableHead>
@@ -163,9 +175,7 @@ export function ListExternalCompanies() {
                       size="small"
                     />
                   </TableCell>
-                  <TableCell>
-                    {new Date(company.created_at).toLocaleDateString()}
-                  </TableCell>
+                  <TableCell>{formatDate(company.created_at)}</TableCell>
                   <TableCell align="right">
                     <Tooltip title="Editar">
                       <IconButton
