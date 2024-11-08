@@ -82,7 +82,7 @@ Sistema de gerenciamento de parceiros e empresas externas desenvolvido com React
 
 ```
 src/
-  ├── components/      # Componentes reutilizáveis
+  ├── components/     # Componentes reutilizáveis
   ├── pages/          # Páginas da aplicação
   ├── services/       # Serviços e APIs
   ├── hooks/          # Custom hooks
@@ -112,10 +112,6 @@ src/
 - `npm run lint` - Executa o linter
 - `npm run format` - Formata o código
 
-## 📝 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
 ## 🤝 Contribuição
 
 1. Faça um fork do projeto
@@ -126,5 +122,5 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 📧 Contato
 
-- LinkedIn: [Márcia Agostinho](https://www.linkedin.com/in/marcia-agostinho-developer/)
+- LinkedIn: [Márcia](https://www.linkedin.com/in/marcia-agostinho-developer/)
 - GitHub: [agostinhomarcia](https://github.com/agostinhomarcia)
