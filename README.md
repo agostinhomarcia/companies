@@ -17,22 +17,22 @@ Sistema de gerenciamento de parceiros e empresas externas desenvolvido com React
   <table>
     <tr>
       <td align="center">
-        <img src="https://i.giphy.com/media/h5T8vkV7cb57Hmjw8U/giphy.gif" alt="Visualização de Parceiros" width="600" style="image-rendering: -webkit-optimize-contrast; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <img src="https://i.giphy.com/media/h5T8vkV7cb57Hmjw8U/giphy.gif" alt="Visualização de Parceiros" width="700" style="image-rendering: -webkit-optimize-contrast; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img src="https://i.giphy.com/media/HGOi9i8U30vArHH31u/giphy.gif" alt="Tela de Login" width="600" style="image-rendering: -webkit-optimize-contrast; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <img src="https://i.giphy.com/media/HGOi9i8U30vArHH31u/giphy.gif" alt="Tela de Login" width="700" style="image-rendering: -webkit-optimize-contrast; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img src="https://i.giphy.com/media/ZFLDGd5bJR6wKpZjXh/giphy.gif" alt="Tela Inicial" width="600" style="image-rendering: -webkit-optimize-contrast; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <img src="https://i.giphy.com/media/ZFLDGd5bJR6wKpZjXh/giphy.gif" alt="Tela Inicial" width="700" style="image-rendering: -webkit-optimize-contrast; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img src="https://i.giphy.com/media/lzDWeXglrg2eOYxcE3/giphy.gif" alt="Visualização de Empresas" width="600" style="image-rendering: -webkit-optimize-contrast; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <img src="https://i.giphy.com/media/lzDWeXglrg2eOYxcE3/giphy.gif" alt="Visualização de Empresas" width="700" style="image-rendering: -webkit-optimize-contrast; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
       </td>
     </tr>
   </table>
