@@ -19,10 +19,14 @@ const queryClient = new QueryClient();
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#1976d2",
+      main: "#673AB7",
+      light: "#7E57C2",
+      dark: "#4527A0",
+      contrastText: "#ffffff",
     },
     background: {
       default: "#f5f5f5",
+      paper: "#ffffff",
     },
   },
 });
