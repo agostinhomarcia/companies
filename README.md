@@ -4,12 +4,14 @@ Sistema de gerenciamento de parceiros e empresas externas desenvolvido com React
 
 ## 🚀 Tecnologias
 
-- React
-- TypeScript
-- Material-UI
-- React Query
-- React Router DOM
-- Date-fns
+<div style="display: inline_block"><br>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white" alt="Material-UI" />
+  <img src="https://img.shields.io/badge/React_Query-FF4154?style=for-the-badge&logo=react-query&logoColor=white" alt="React Query" />
+  <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" alt="React Router DOM" />
+  <img src="https://img.shields.io/badge/date--fns-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="date-fns" />
+</div>
 
 ### 📺 Demonstração
 
