@@ -13,38 +13,22 @@ Sistema de gerenciamento de parceiros e empresas externas desenvolvido com React
   <img src="https://img.shields.io/badge/date--fns-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="date-fns" />
 </div>
 
-## 🎨 Evolução do Design
-
-O projeto inicialmente foi desenvolvido com um tema em azul, mas para trazer mais personalidade e diferenciação, adaptamos para um elegante tema em roxo. Confira a transformação:
-
-<div align="center">
-  <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWhzdWt5aWMzdzh0cDNoYW8yOTg0YTU3ZmFmbDg2d2ZlN2NmZDVleCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UNd48m4yGKdRiZsSmg/giphy.gif" alt="Evolução do tema" width="700" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-</div>
-
 ### 📺 Demonstração
 
-<div align="center" style="margin: 20px 0">
+<div align="center">
   <table>
     <tr>
       <td align="center">
-        <img src="https://i.giphy.com/media/h5T8vkV7cb57Hmjw8U/giphy.gif" alt="BusinessFlow" width="700" style="image-rendering: -webkit-optimize-contrast; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWhzdWt5aWMzdzh0cDNoYW8yOTg0YTU3ZmFmbDg2d2ZlN2NmZDVleCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UNd48m4yGKdRiZsSmg/giphy.gif" alt="Evolução do tema" width="700" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img src="https://i.giphy.com/media/HGOi9i8U30vArHH31u/giphy.gif" alt="BusinessFlow" width="700" style="image-rendering: -webkit-optimize-contrast; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2Q2NWl4MWl5YTh6eTFianQ4YzgxN2xlcmt4Zms3cDlmZ28waTl1cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GjiaxAMJaforlLVTbb/giphy.gif" alt="BusinessFlow" width="700" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
       </td>
     </tr>
-    <tr>
-      <td align="center">
-        <img src="https://i.giphy.com/AxC4xXzsD82v2uAlld.gif" alt="BusinessFlow" width="700" style="image-rendering: -webkit-optimize-contrast; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-      </td>
-    </tr>
-    <tr>
-      <td align="center">
-        <img src="https://i.giphy.com/media/lzDWeXglrg2eOYxcE3/giphy.gif" alt="BusinessFlow" width="700" style="image-rendering: -webkit-optimize-contrast; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-      </td>
-    </tr>
+
+
   </table>
 </div>
 
